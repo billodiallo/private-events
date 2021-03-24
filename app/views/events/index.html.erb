@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Events</h1>
+
+<table>
+  <tbody>
+    <h2>Upcoming events</h2>
+    <% @events.upcoming.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event.date %></td>
+        <td><%= event.user_id %></td>
+        <td><%= link_to 'Show', event %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<table>
+  <tbody>
+    <h2>past events</h2>
+    <% @events.past.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event.date %></td>
+        <td><%= event.user_id %></td>
+        <td><%= link_to 'Show', event %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>
