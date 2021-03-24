@@ -4,4 +4,3 @@ class Attendance < ApplicationRecord
   belongs_to :event
 end
 # rubocop:enable Layout/EndOfLine
-.
