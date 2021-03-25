@@ -11,7 +11,7 @@ A user can create events. A user can attend many events. An event can be attende
 In this project we created a simple user system and secret posts in Ruby on Rails.
 - Created a user Authentication model
 - Create Event 
-- Created a Event controller
+- Created an Event controller
 - Created view pages for event, show & form
 - Create migration files with table rules
 - Add devise to user for Authentication (sign_in ,sign_up)
