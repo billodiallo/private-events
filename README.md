@@ -3,7 +3,10 @@
 
 # Ruby on Rails Private-Event implementing Association
 
-This is Association  project built with devise
+In this project we built a site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and join other events. Events take place at a specific date and at a location.
+
+A user can create events. A user can attend many events. An event can be attended by many users. This will require many-to-many relationships and also to be very conscious about your foreign keys and class names.
+
 #### Did the following tasks:
 In this project we created a simple user system and secret posts in Ruby on Rails.
 - Created a user Authentication model
@@ -14,6 +17,8 @@ In this project we created a simple user system and secret posts in Ruby on Rail
 - Add devise to user for Authentication (sign_in ,sign_up)
 - Adjust associations between models
 - Create migration files with required foreign keys
+- visitor model, view, controller setup
+- The associations between Event and User model over middle table
 
 <!-- TABLE OF CONTENTS -->
 
@@ -52,6 +57,9 @@ To use THIS ACTIVE record project :
 - Type rails s in the root file of the project.
 - You can go to rails console by typing rails console and create Member by using Active Record  commands and methods.
 
+## LINTERS
+- Rubocop
+- Stylelint
 
 <!-- CONTACT -->
 ## Contact
