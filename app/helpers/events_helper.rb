@@ -10,5 +10,4 @@ module EventsHelper
         (link_to 'sign up', new_user_registration_path, class: 'btn_special1 text-light btn_all')
     end
   end
-
 end
