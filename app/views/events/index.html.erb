@@ -3,26 +3,23 @@
 <div class="container">
 <table class="wrapper">
   <tbody class="wrap">
-    <h2>Upcoming events</h2>
+    <h2 class="text-primary">Upcoming events</h2>
     <% @events.upcoming.each do |event| %>
       <tr class="test1">
         <td><%= event.title %></td>
         <td><%= event.description %></td>
-        <td class="specialtd">
-        <%= event.location %>
-        <%= event.date %>
-        </td>
-        <td><%= link_to 'Enroll Now!', event %></td>
-        
+        <td><%= event.location %></td>
+        <td><%= event.date %></td>
+        <td class="h5text-danger"><%= link_to 'Enroll Now!', event %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <table class="wrapper">
   <tbody class="wrap">
-    <h2>past events</h2>
+    <h2 class="text-primary">Past Events</h2>
     <% @events.past.each do |event| %>
-      <tr>
+      <tr class="test1">
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= event.location %></td>

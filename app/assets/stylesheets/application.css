@@ -73,8 +73,10 @@
 }
 
 .container {
-    background-color: #f8f9fa;
+    background-color: #404041;
     width: 95%;
+    text-align: center;
+    border-radius: 20px;
 }
 
 .test {
@@ -88,11 +90,17 @@
 }
 
 .test1 > td {
-    border: 1px solid blue;
+    border: 1px solid rgb(105, 103, 103);
 }
 
 .specialtd {
-    color: brown;
+    color: rgb(211, 191, 191);
     display: flex;
     justify-content: space-between;
+}
+td {
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    text-transform: capitalize;
 }
