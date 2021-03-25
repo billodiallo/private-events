@@ -25,5 +25,43 @@
   <%= @event.user_id %>
 </p>
 
+<%# ################################################## %>
+
+<div class="row mb-4">
+  <div class="col">
+    <h1><%= @event.title.titleize %></h1>
+  </div>
+  <div class="col text-right">
+    <% if current_user == @event.creator %>
+      <%= link_to 'Edit', edit_event_path, class: "btn btn-outline-secondary" %>
+      <%= link_to 'Delete', event_path, method: :delete, class: "btn btn-outline-secondary",
+                            data: { confirm: "Delete this event?"} %>
+    <% elsif @event.attendees.include?(current_user) %>
+      <%= link_to 'Cancel visitor', cancel_visitor_event_path, class: "btn btn-outline-secondary" %>
+    <% else %>
+      <%= link_to 'Want to Join --- Go ', visitor_event_path, class: "btn btn-primary" unless @event.date < Time.now %>
+    <% end %>
+  </div>
+</div>
+
+
+<%# test create attended %>
+<h3>Attendees of this event:</h3>
+
+<% if @event.attendees.empty? %>
+<div class="list-group">
+  <li class="list-group-item text-muted">This event has no attendees yet</li>
+</div>
+<% else %>
+  <div class="list-group">
+    <% @event.attendees.each do |attendee| %>
+    <li class="list-group-item"> <%= attendee.email %> </li>
+    <% end %>
+  </div>
+<% end %>
+
+<%# end created attede %>
+
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

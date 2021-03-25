@@ -8,8 +8,4 @@ class Event < ApplicationRecord
 
   validates :user_id, :title, :description, :date, :location, presence: true, length: { maximum: 50 }
 
-#   belongs_to :user
-#   scope :past, -> { where('date < ?', Date.today) }
-#   scope :upcoming, -> { where('date >= ?', Date.today) }
-  # has_many :visitors, class_name: 'User', foreign_key:'user_id'
 end

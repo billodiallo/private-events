@@ -7,12 +7,14 @@
     <h2>Upcoming events</h2>
     <% @events.upcoming.each do |event| %>
       <tr>
+        
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= event.location %></td>
         <td><%= event.date %></td>
         <td><%= event.user_id %></td>
         <td><%= link_to 'Show', event %></td>
+        
       </tr>
     <% end %>
   </tbody>
