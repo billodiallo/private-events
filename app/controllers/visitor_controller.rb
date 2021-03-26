@@ -4,6 +4,7 @@ class VisitorsController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
     if !@event.attendees.include? current_user
+      current_user.attended_events += 1
       @event.attendees << current_user
     else
       flash[:alert] = 'You are already registered!'
