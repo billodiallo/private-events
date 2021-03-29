@@ -1,0 +1,29 @@
+<h1 > hello</h1>
+<%= current_user.email%>
+
+<div class="row">
+  <div class="col-md mb-4">
+    <p class="text-muted"> <%= current_user.created_events.count %> CREATED</p>
+    <div class="list-group mt-3">
+        <% current_user.created_events.each do |event| %>
+          <%= link_to event.title, event_path(event), class: "list-group-item list-group-item-action" %>
+        <% end %>
+    </div>
+  </div>
+  <div class="col-md mb-4">
+    <p class="text-muted"> <%= @upcoming_events.count %> ATTENDING</p>
+    <div class="list-group mt-3">
+        <% @upcoming_events.each do |event| %>
+          <%= link_to event.title, event_path(event), class: "list-group-item list-group-item-action" %>
+        <% end %>
+    </div>
+  </div>
+  <div class="col-md mb-4">
+    <p class="text-muted"> <%= @past_events.count %> ATTENDED</p>
+    <div class="list-group mt-3">
+        <% @past_events.each do |event| %>
+          <%= link_to event.title, event_path(event), class: "list-group-item list-group-item-action" %>
+        <% end %>
+    </div>
+  </div>
+</div>
